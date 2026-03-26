@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | TrueGrain Decking Sample Request</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="images/truegrain-logo.png" alt="TrueGrain Decking" />
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Thank You</p>
+      <h1 class="hero-title" id="ty-title">Your Samples Are on the Way</h1>
+      <p class="hero-sub">We'll get your TrueGrain deck samples in the mail shortly. Check your inbox for a shipping confirmation.</p>
+    </div>
+  </section>
+
+  <main class="form-wrapper">
+    <section class="form-card" style="text-align:center; padding: 2.5rem 2rem;">
+      <div class="success-icon" style="margin:0 auto 1rem;">&#10003;</div>
+      <h2 class="step-title" style="margin-bottom: 0.5rem;">Sample Request Received</h2>
+      <p class="step-desc" style="max-width: 480px; margin: 0 auto 1.5rem;" id="ty-body">
+        We've received your sample request. Our team will follow up within 1-2 business days if you have any questions.
+      </p>
+      <a class="btn btn-primary" href="index.html">Request More Samples</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/truegrain-logo.png" alt="TrueGrain Decking" />
+      </div>
+      <p class="footer-note">Samples are provided free of charge for project evaluation. Contact sales for specifications.</p>
+      <div class="footer-contact">
+        <span>1-877-442-6776</span>
+        <span class="footer-sep">|</span>
+        <a href="mailto:sales@americanprobp.com">sales@americanprobp.com</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Patwin Plastics, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    // Personalize with query params
+    var params = new URLSearchParams(window.location.search);
+    var name = params.get('name');
+    if (name) {
+      document.getElementById('ty-title').textContent = name + ', Your Samples Are on the Way';
+    }
+  </script>
+</body>
+</html>

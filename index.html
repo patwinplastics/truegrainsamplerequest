@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request free TrueGrain Decking samples. Choose your colors and sample size, and we'll ship them to you at no cost." />
+  <meta property="og:title" content="TrueGrain Decking Sample Request" />
+  <meta property="og:description" content="Request free deck board samples in the TrueGrain colors you love. Choose 6-inch or 12-inch samples." />
+  <meta property="og:type" content="website" />
+  <title>TrueGrain Decking Sample Request</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <img src="images/truegrain-logo.png" alt="TrueGrain Decking" />
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Free Samples</p>
+      <h1 class="hero-title">Request TrueGrain Deck Samples</h1>
+      <p class="hero-sub">Pick the colors you want to see in person. We'll ship small deck board samples to your door at no cost.</p>
+    </div>
+  </section>
+
+  <!-- MAIN FORM -->
+  <main class="form-wrapper">
+
+    <!-- STEP 1: SAMPLE SIZE -->
+    <section class="form-card" id="section-size">
+      <div class="step-header">
+        <div class="step-icon">&#9632;</div>
+        <div>
+          <h2 class="step-title">Choose your sample size</h2>
+          <p class="step-desc">Select the board sample length you'd like to receive.</p>
+        </div>
+      </div>
+      <div class="size-grid" id="size-grid" role="radiogroup" aria-label="Sample size selection">
+        <div class="size-card" data-size="6" tabindex="0" role="radio" aria-checked="false">
+          <div class="size-icon">
+            <svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="4" width="32" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <line x1="1" y1="14" x2="33" y2="14" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+              <text x="38" y="18" font-size="10" font-weight="700" fill="currentColor">6"</text>
+            </svg>
+          </div>
+          <span class="size-label">6-Inch Sample</span>
+          <span class="size-detail">Compact swatch, great for color matching</span>
+        </div>
+        <div class="size-card" data-size="12" tabindex="0" role="radio" aria-checked="false">
+          <div class="size-icon">
+            <svg width="56" height="28" viewBox="0 0 56 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="4" width="40" height="20" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <line x1="1" y1="14" x2="41" y2="14" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+              <text x="44" y="18" font-size="10" font-weight="700" fill="currentColor">12"</text>
+            </svg>
+          </div>
+          <span class="size-label">12-Inch Sample</span>
+          <span class="size-detail">Larger piece, see the full grain and texture</span>
+        </div>
+      </div>
+      <span class="form-error" id="size-error"></span>
+    </section>
+
+    <!-- STEP 2: COLOR SELECTION -->
+    <section class="form-card" id="section-colors">
+      <div class="step-header">
+        <div class="step-icon">&#11044;</div>
+        <div>
+          <h2 class="step-title">Select your colors</h2>
+          <p class="step-desc">Click any swatch to select it. You can request all 6 colors if you'd like.</p>
+        </div>
+      </div>
+      <div class="selection-count" id="selection-count">
+        <span class="count-num" id="count-num">0</span>
+        <span class="count-text" id="count-text">colors selected</span>
+        <button class="btn-select-all" id="btn-select-all" type="button">Select All</button>
+      </div>
+      <div class="swatch-grid" id="color-swatch-grid" role="group" aria-label="Color selection"></div>
+      <span class="form-error" id="color-error"></span>
+    </section>
+
+    <!-- STEP 3: YOUR INFO -->
+    <section class="form-card" id="section-info">
+      <div class="step-header">
+        <div class="step-icon">&#9993;</div>
+        <div>
+          <h2 class="step-title">Where should we ship your samples?</h2>
+          <p class="step-desc">Enter your contact and shipping info below. All fields marked with <span class="required-star">*</span> are required.</p>
+        </div>
+      </div>
+
+      <form id="sample-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="sample-name">Full Name <span class="required-star">*</span></label>
+            <input class="form-input" type="text" id="sample-name" placeholder="Jane Smith" autocomplete="name" />
+            <span class="form-error" id="sample-name-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sample-email">Email Address <span class="required-star">*</span></label>
+            <input class="form-input" type="email" id="sample-email" placeholder="jane@example.com" autocomplete="email" />
+            <span class="form-error" id="sample-email-error"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="sample-phone">Phone (optional)</label>
+            <input class="form-input" type="tel" id="sample-phone" placeholder="(555) 000-0000" autocomplete="tel" />
+            <span class="form-error" id="sample-phone-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sample-company">Company (optional)</label>
+            <input class="form-input" type="text" id="sample-company" placeholder="ABC Builders" autocomplete="organization" />
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="section-subhead">Shipping Address</p>
+
+        <div class="form-row">
+          <div class="form-group form-group--full">
+            <label class="form-label" for="sample-address">Street Address <span class="required-star">*</span></label>
+            <input class="form-input" type="text" id="sample-address" placeholder="123 Main Street" autocomplete="street-address" />
+            <span class="form-error" id="sample-address-error"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="sample-address2">Apt / Suite / Unit (optional)</label>
+            <input class="form-input" type="text" id="sample-address2" placeholder="Suite 200" autocomplete="address-line2" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sample-city">City <span class="required-star">*</span></label>
+            <input class="form-input" type="text" id="sample-city" placeholder="Point Pleasant Beach" autocomplete="address-level2" />
+            <span class="form-error" id="sample-city-error"></span>
+          </div>
+        </div>
+        <div class="form-row form-row--three">
+          <div class="form-group">
+            <label class="form-label" for="sample-state">State <span class="required-star">*</span></label>
+            <select class="form-input form-select" id="sample-state" autocomplete="address-level1">
+              <option value="">Select</option>
+              <option value="AL">AL</option><option value="AK">AK</option><option value="AZ">AZ</option>
+              <option value="AR">AR</option><option value="CA">CA</option><option value="CO">CO</option>
+              <option value="CT">CT</option><option value="DE">DE</option><option value="FL">FL</option>
+              <option value="GA">GA</option><option value="HI">HI</option><option value="ID">ID</option>
+              <option value="IL">IL</option><option value="IN">IN</option><option value="IA">IA</option>
+              <option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option>
+              <option value="ME">ME</option><option value="MD">MD</option><option value="MA">MA</option>
+              <option value="MI">MI</option><option value="MN">MN</option><option value="MS">MS</option>
+              <option value="MO">MO</option><option value="MT">MT</option><option value="NE">NE</option>
+              <option value="NV">NV</option><option value="NH">NH</option><option value="NJ">NJ</option>
+              <option value="NM">NM</option><option value="NY">NY</option><option value="NC">NC</option>
+              <option value="ND">ND</option><option value="OH">OH</option><option value="OK">OK</option>
+              <option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option>
+              <option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option>
+              <option value="TX">TX</option><option value="UT">UT</option><option value="VT">VT</option>
+              <option value="VA">VA</option><option value="WA">WA</option><option value="WV">WV</option>
+              <option value="WI">WI</option><option value="WY">WY</option><option value="DC">DC</option>
+            </select>
+            <span class="form-error" id="sample-state-error"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sample-zip">ZIP Code <span class="required-star">*</span></label>
+            <input class="form-input" type="text" id="sample-zip" placeholder="08742" maxlength="10" autocomplete="postal-code" />
+            <span class="form-error" id="sample-zip-error"></span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="form-group">
+          <label class="form-label" for="sample-notes">Notes / Questions (optional)</label>
+          <textarea class="form-input form-textarea" id="sample-notes" rows="3" placeholder="Let us know if you have any questions or special requests..."></textarea>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary-block" id="summary-block">
+          <h3 class="summary-title">Your sample request</h3>
+          <div class="summary-row">
+            <span class="summary-label">Sample Size</span>
+            <span class="summary-value" id="summary-size">Not selected</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Colors</span>
+            <span class="summary-value" id="summary-colors">None selected</span>
+          </div>
+        </div>
+
+        <button class="btn btn-cta" type="submit" id="sample-submit">Submit Sample Request</button>
+        <p class="lead-privacy">We respect your privacy. Your info is only used to fulfill your sample request and connect you with a local dealer.</p>
+      </form>
+
+      <!-- SUCCESS MESSAGE -->
+      <div class="lead-success" id="form-success" style="display:none;">
+        <div class="success-icon">&#10003;</div>
+        <h3 class="success-title">Sample request submitted!</h3>
+        <p class="success-body">We'll get your samples in the mail shortly. Keep an eye on your inbox for a shipping confirmation.</p>
+        <button class="btn btn-primary" id="btn-new-request" style="margin-top:1.25rem;">Submit Another Request</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/truegrain-logo.png" alt="TrueGrain Decking" />
+      </div>
+      <p class="footer-note">Samples are provided free of charge for residential and commercial project evaluation. Subject to availability. Contact sales for detailed product specifications.</p>
+      <div class="footer-contact">
+        <span>1-877-442-6776</span>
+        <span class="footer-sep">|</span>
+        <a href="mailto:sales@americanprobp.com">sales@americanprobp.com</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Patwin Plastics, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
