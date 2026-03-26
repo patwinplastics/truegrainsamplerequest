@@ -8,7 +8,7 @@
   'use strict';
 
   /* ---- CONFIG ---- */
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/mykbydye';
   var THANKYOU_URL       = 'thankyou.html';
 
   /* ---- COLOR CATALOG (TrueGrain 6-color lineup) ---- */
