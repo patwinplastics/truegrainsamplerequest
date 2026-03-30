@@ -17,7 +17,7 @@
     { id: 'aged-oak',           label: 'Aged Oak',           swatch: 'images/swatch-aged-oak.jpg'           },
     { id: 'embered-taupe',      label: 'Embered Taupe',      swatch: 'images/swatch-embered-taupe.jpg'      },
     { id: 'tropical-walnut',    label: 'Tropical Walnut',    swatch: 'images/swatch-tropical-walnut.jpg'    },
-    { id: 'coast-driftwood',    label: 'Coast Driftwood',    swatch: 'images/swatch-coast-driftwood.jpg'    },
+    { id: 'coastal-driftwood',  label: 'Coastal Driftwood',  swatch: 'images/swatch-coast-driftwood.jpg'    },
     { id: 'new-england-birch',  label: 'New England Birch',  swatch: 'images/swatch-new-england-birch.jpg'  }
   ];
 
